@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinnari Zala Portfolio</title>
+  <style>
+    /* ---- Basic Reset ---- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { line-height: 1.6; color: #333; background: #f8f8f8; }
+
+    /* ---- Header & Tabs ---- */
+    header { background: #004aad; color: white; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
+    header h1 { display: inline; font-size: 1.8rem; }
+    nav { display: inline; float: right; }
+    nav button { background: transparent; border: none; color: white; margin-left: 1rem; font-size: 1rem; cursor: pointer; padding: 0.3rem 0.6rem; border-radius: 5px; transition: 0.3s; }
+    nav button:hover, nav button.active { background: white; color: #004aad; }
+
+    /* ---- Section Styling ---- */
+    section { padding: 60px 20px; display: none; max-width: 1000px; margin: auto; }
+    section.active { display: block; }
+    h2 {padding: 0px; margin: 20px; color: #004aad; }
+
+    /* ---- About Me ---- */
+    /* #about img { max-width: 200px; border-radius: 50%; margin-bottom: 1rem; } */
+
+    /* ---- Projects ---- */
+    .project { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .project h3 { margin-bottom: 0.5rem; }
+    .project a { color: #004aad; text-decoration: none; }
+    .project a:hover { text-decoration: underline; }
+
+    /* ---- Achievements ---- */
+    .achievement { background: white; padding: 0.8rem; margin-bottom: 0.5rem; border-radius: 8px; }
+
+    /* ---- Extracurricular ---- */
+    .hobby { display: inline-block; background: #004aad; color: white; padding: 0.5rem 1rem; border-radius: 20px; margin: 0.3rem; }
+
+    /* ---- Contact ---- */
+    form { display: flex; flex-direction: column; max-width: 400px; }
+    form input, form textarea { margin-bottom: 1rem; padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc; }
+    form button { background: #004aad; color: white; border: none; padding: 0.6rem; cursor: pointer; border-radius: 5px; }
+    form button:hover { background: #003080; }
+
+    /* ---- Responsive ---- */
+    @media(max-width:600px){
+      nav { float: none; text-align: center; margin-top: 0.5rem; }
+      nav button { margin: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <h1>Kinnari Zala</h1>
+    <nav>
+      <button class="tab-btn active" data-tab="about">About Me</button>
+      <button class="tab-btn" data-tab="projects">My Projects</button>
+      <button class="tab-btn" data-tab="achievements">Achievements</button>
+      <button class="tab-btn" data-tab="extracurriculars">Extracurriculars</button>
+      <button class="tab-btn" data-tab="contact">Contact</button>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="active">
+    <h2 style="font-size: 2rem;">About Me</h2>
+    <img src="./portfolio_image.png" alt="Profile Picture"
+    style="width: 200px;00px; height:300px; float: left; margin-right: 35px; margin-top: 5px;">
+    <p style="text-align: justify;">
+        I am an MSc Bioinformatics student with a strong interest in computational biology and real-world data analysis. 
+        My experience includes working with genomic datasets, performing data visualization with Python and R, and developing 
+        small automation and analysis projects that turn complex biological data into actionable insights. I am passionate 
+        about bridging biology and computation, and I am currently seeking opportunities for thesis projects where I can 
+        apply my skills to solve meaningful biological problems. I enjoy building practical tools and visualizations that 
+        make data exploration intuitive, and I aim to continue growing as a computational biologist.
+    </p>
+    
+    <ul>
+      <li>Current Focus: Looking forward to connect with leading bioniformatics firms</li>
+      <li>Skills: Python, R, Data Visualization, Bioinformatics</li>
+      <li>Career Goal: [Your future aspiration]</li>
+    </ul>
+  </section>
+
+  
+<!-- Projects Section -->
+<section id="projects">
+  <h2>My Projects</h2>
+
+  <div class="project">
+    <h3>Genomic Visualization — RNA Binding Proteins</h3>
+    <p>Visualized RNA binding protein signals alongside gene annotation data using Python, Matplotlib, and Seaborn. This project includes multiple versions of plots for deep genomic interpretation.</p>
+    <a href="https://github.com/Kin-zala/genomic-visualization-rna-binding-proteins" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="project">
+    <h3>Genomic Visualization Exercise 2</h3>
+    <p>Extended genomic visualization with a multi‑panel figure combining scatter plots, bar charts, and heatmaps to analyze interactions between signals and annotations.</p>
+    <a href="https://github.com/Kin-zala/genomic-visualization_2" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="project">
+    <h3>Genomic Visualization Exercise 3</h3>
+    <p>Created a structured grid of line plots to compare patterns across different genomic datasets, showcasing advanced plotting and layout skills with Matplotlib.</p>
+    <a href="https://github.com/Kin-zala/Genomic_visualization_3" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="project">
+    <h3>Genomic Visualization Exercise 4</h3>
+    <p>A follow‑up visualization project in your genomic data series with notebooks and scripts demonstrating consistency in bioinformatics visual storytelling.</p>
+    <a href="https://github.com/Kin-zala/genomic_visualization_4" target="_blank">View on GitHub</a>
+  </div>
+</section>
+
+  <!-- Achievements Section -->
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="achievement">Published a paper on RNA-seq analysis in Journal XYZ.</div>
+    <div class="achievement">Won 1st place in University Data Visualization Competition.</div>
+    <div class="achievement">Completed advanced Bioinformatics certification online.</div>
+  </section>
+
+  <!-- Extracurriculars Section -->
+  <section id="extracurriculars">
+    <h2>Extracurriculars & Hobbies</h2>
+    <div class="hobby">Cooking</div>
+    <div class="hobby">Chess</div>
+    <div class="hobby">Science Blogging</div>
+    <div class="hobby">Fitness</div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:kinzala111@gmail.com">kinzala111@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Kin-zala">https://github.com/Kin-zala</a></p>
+    
+  </section>
+
+  <!-- JS for Tabs -->
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        sections.forEach(sec => sec.classList.remove('active'));
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
