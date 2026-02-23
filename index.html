@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kinnari Zala Portfolio</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     /* ---- Basic Reset ---- */
     * { 
@@ -78,6 +79,15 @@
       display: inline-block;
     }
 
+    h3.sub-heading {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #555;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
     /* ---- About Me ---- */
     .profile-img {
       width: 200px;
@@ -121,12 +131,8 @@
       margin-top: 10px;
     }
 
-    .project a:hover { 
-      text-decoration: underline; 
-    }
-
-    /* ---- Education ---- */
-    .education { 
+    /* ---- Education & Hobbies ---- */
+    .education-item { 
       background: white; 
       padding: 1rem; 
       margin-bottom: 1rem; 
@@ -135,15 +141,31 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
-    /* ---- Extracurricular ---- */
     .hobby { 
       display: inline-block; 
-      background: #004aad; 
-      color: white; 
+      background: #eef4ff; 
+      color: #004aad; 
       padding: 0.5rem 1.2rem; 
       border-radius: 25px; 
       margin: 0.3rem; 
       font-size: 0.9rem;
+      border: 1px solid #004aad;
+    }
+
+    /* ---- Tools Section (Iframe) ---- */
+    .iframe-container {
+      width: 100%;
+      height: 700px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      background: white;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
 
     /* ---- Contact ---- */
@@ -159,22 +181,11 @@
 
     /* ---- Responsive ---- */
     @media(max-width:768px){
-      header {
-        flex-direction: column;
-        padding: 1rem;
-      }
-      nav { 
-        margin-top: 1rem; 
-      }
-      nav button { 
-        margin: 0.1rem; 
-        font-size: 0.85rem;
-      }
-      .profile-img {
-        float: none;
-        display: block;
-        margin: 0 auto 20px auto;
-      }
+      header { flex-direction: column; padding: 1rem; }
+      nav { margin-top: 1rem; }
+      nav button { margin: 0.1rem; font-size: 0.85rem; }
+      .profile-img { float: none; display: block; margin: 0 auto 20px auto; }
+      .iframe-container { height: 500px; }
     }
   </style>
 </head>
@@ -186,7 +197,7 @@
       <button class="tab-btn active" data-tab="about">About Me</button>
       <button class="tab-btn" data-tab="projects">Projects</button>
       <button class="tab-btn" data-tab="education">Education</button>
-      <button class="tab-btn" data-tab="extracurriculars">Interests</button>
+      <button class="tab-btn" data-tab="tools">Bioinfo Tools</button>
       <button class="tab-btn" data-tab="contact">Contact</button>
     </nav>
   </header>
@@ -213,55 +224,50 @@
 
   <section id="projects">
     <h2>My Projects</h2>
-
     <div class="project">
       <h3>Genomic Visualization — RNA Binding Proteins</h3>
-      <p>Visualized RNA binding protein signals alongside gene annotation data using Python, Matplotlib, and Seaborn. This project includes multiple versions of plots for deep genomic interpretation.</p>
+      <p>Visualized RNA binding protein signals alongside gene annotation data using Python, Matplotlib, and Seaborn.</p>
       <a href="https://github.com/Kin-zala/genomic-visualization-rna-binding-proteins" target="_blank">View on GitHub →</a>
     </div>
 
     <div class="project">
       <h3>Genomic Visualization Exercise 2</h3>
-      <p>Extended genomic visualization with a multi‑panel figure combining scatter plots, bar charts, and heatmaps to analyze interactions between signals and annotations.</p>
+      <p>Extended genomic visualization with a multi‑panel figure combining scatter plots, bar charts, and heatmaps.</p>
       <a href="https://github.com/Kin-zala/genomic-visualization_2" target="_blank">View on GitHub →</a>
     </div>
 
     <div class="project">
       <h3>Genomic Visualization Exercise 3</h3>
-      <p>Created a structured grid of line plots to compare patterns across different genomic datasets, showcasing advanced plotting and layout skills with Matplotlib.</p>
+      <p>Created a structured grid of line plots to compare patterns across different genomic datasets.</p>
       <a href="https://github.com/Kin-zala/Genomic_visualization_3" target="_blank">View on GitHub →</a>
     </div>
 
     <div class="project">
       <h3>Genomic Visualization Exercise 4</h3>
-      <p>A follow‑up visualization project in your genomic data series with notebooks and scripts demonstrating consistency in bioinformatics visual storytelling.</p>
+      <p>Notebooks and scripts demonstrating consistency in bioinformatics visual storytelling.</p>
       <a href="https://github.com/Kin-zala/genomic_visualization_4" target="_blank">View on GitHub →</a>
     </div>
   </section>
 
   <section id="education">
     <h2>Education</h2>
-    <div class="education">
-      <strong>B.Sc. in Microbiology</strong> (Gujarat University)
-    </div>
-    <div class="education">
-      <strong>M.Sc. in Forensic Science</strong> (Gujarat University)
-    </div>
-    <div class="education">
-      <strong>Post-graduate Research</strong> (University of Reading)
-    </div>
-    <div class="education">
-      <strong>M.Sc. Life Science Informatics</strong> (Deggendorf Institute of Technology) - Expected 2026
-    </div>
-  </section>
+    <div class="education-item"><strong>M.Sc. Life Science Informatics</strong> (Deggendorf Institute of Technology) - Expected 2026</div>
+    <div class="education-item"><strong>Post-graduate Research</strong> (University of Reading)</div>
+    <div class="education-item"><strong>M.Sc. in Forensic Science</strong> (Gujarat University)</div>
+    <div class="education-item"><strong>B.Sc. in Microbiology</strong> (Gujarat University)</div>
 
-  <section id="extracurriculars">
-    <h2>Extracurriculars & Hobbies</h2>
-    </div>
+    <h3 class="sub-heading">Interests & Hobbies</h3>
     <div class="hobby">Cooking</div>
     <div class="hobby">Rifle Shooting</div>
     <div class="hobby">Travelling</div>
-     </div>
+  </section>
+
+  <section id="tools">
+    <h2>Bioinformatics Tools</h2>
+    <p style="margin-bottom: 1.5rem;">Interactive Streamlit application for genomic data analysis and visualization.</p>
+    <div class="iframe-container">
+      <iframe src="http://tools.kinnarizala.me:8501/" title="Bioinformatics Tool"></iframe>
+    </div>
   </section>
 
   <section id="contact">
@@ -279,23 +285,14 @@
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        // Remove active class from all buttons
         tabs.forEach(t => t.classList.remove('active'));
-        // Add active class to clicked button
         tab.classList.add('active');
-
-        // Hide all sections
         sections.forEach(sec => sec.classList.remove('active'));
-        // Show the targeted section
         const target = tab.getAttribute('data-tab');
         document.getElementById(target).classList.add('active');
-        
-        // Scroll to top of section on mobile
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
   </script>
-
 </body>
 </html>
-
