@@ -6,7 +6,6 @@
   <title>Kinnari Zala Portfolio</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
-    /* ---- Basic Reset ---- */
     * { 
       margin: 0; 
       padding: 0; 
@@ -20,7 +19,6 @@
       background: #f8f8f8; 
     }
 
-    /* ---- Header & Tabs ---- */
     header { 
       background: #004aad; 
       color: white; 
@@ -54,7 +52,6 @@
       color: #004aad; 
     }
 
-    /* ---- Section Styling ---- */
     section { 
       padding: 60px 20px; 
       display: none; 
@@ -83,12 +80,11 @@
       margin-top: 2rem;
       margin-bottom: 1rem;
       color: #555;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    /* ---- About Me ---- */
     .profile-img {
       width: 200px;
       height: 250px;
@@ -109,7 +105,6 @@
       clear: both;
     }
 
-    /* ---- Projects ---- */
     .project { 
       background: white; 
       padding: 1.5rem; 
@@ -123,15 +118,11 @@
       color: #004aad;
     }
 
-    .project a { 
-      color: #004aad; 
-      text-decoration: none; 
-      font-weight: bold;
-      display: inline-block;
+    .project ul {
+      margin-left: 20px;
       margin-top: 10px;
     }
 
-    /* ---- Education & Hobbies ---- */
     .education-item { 
       background: white; 
       padding: 1rem; 
@@ -139,6 +130,11 @@
       border-radius: 8px; 
       border-left: 5px solid #004aad;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .skill-list {
+      margin-left: 20px;
+      margin-top: 10px;
     }
 
     .hobby { 
@@ -152,7 +148,6 @@
       border: 1px solid #004aad;
     }
 
-    /* ---- Tools Section (Iframe) ---- */
     .iframe-container {
       width: 100%;
       height: 700px;
@@ -168,7 +163,6 @@
       border: none;
     }
 
-    /* ---- Contact ---- */
     .contact-info p {
       margin-bottom: 1rem;
       font-size: 1.1rem;
@@ -179,7 +173,6 @@
       text-decoration: none;
     }
 
-    /* ---- Responsive ---- */
     @media(max-width:768px){
       header { flex-direction: column; padding: 1rem; }
       nav { margin-top: 1rem; }
@@ -191,109 +184,160 @@
 </head>
 <body>
 
-  <header>
-    <h1>Kinnari Zala</h1>
-    <nav>
-      <button class="tab-btn active" data-tab="about">About Me</button>
-      <button class="tab-btn" data-tab="projects">Projects</button>
-      <button class="tab-btn" data-tab="education">Education</button>
-      <button class="tab-btn" data-tab="tools">Bioinfo Tools</button>
-      <button class="tab-btn" data-tab="contact">Contact</button>
-    </nav>
-  </header>
+<header>
+  <h1>Kinnari Zala</h1>
+  <nav>
+    <button class="tab-btn active" data-tab="about">About Me</button>
+    <button class="tab-btn" data-tab="projects">Projects</button>
+    <button class="tab-btn" data-tab="education">Education</button>
+    <button class="tab-btn" data-tab="tools">Bioinfo Tools</button>
+    <button class="tab-btn" data-tab="contact">Contact</button>
+  </nav>
+</header>
 
-  <section id="about" class="active">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <img src="./portfolio_image.png" alt="Profile Picture" class="profile-img">
-      <p class="about-content">
-        I am an MSc Bioinformatics student with a strong interest in computational biology and real-world data analysis. 
-        My experience includes working with genomic datasets, performing data visualization with Python and R, and developing 
-        small automation and analysis projects that turn complex biological data into actionable insights. I am passionate 
-        about bridging biology and computation, and I am currently seeking opportunities for thesis projects where I can 
-        apply my skills to solve meaningful biological problems.
-      </p>
-      
-      <ul class="skills-list">
-        <li><strong>Current Focus:</strong> Looking forward to connect with leading bioinformatics firms.</li>
-        <li><strong>Skills:</strong> Python, R, Data Visualization, Genomic Analysis.</li>
-        <li><strong>Career Goal:</strong> To contribute to impactful research at the intersection of biology and computation.</li>
-      </ul>
-    </div>
-  </section>
+<section id="about" class="active">
+  <h2>About Me</h2>
+  <img src="./portfolio_image.png" alt="Profile Picture" class="profile-img">
+  <p class="about-content">
+    I am an MSc Life Science Informatics (Bioinformatics) student at Deggendorf Institute of Technology, Germany, with strong interest in RNA-Seq analysis, NGS data processing, and reproducible computational workflows. My work focuses on transforming complex genomic datasets into structured, interpretable biological insights using Python, R, and workflow automation.
+  </p>
+</section>
 
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="project">
-      <h3>Genomic Visualization — RNA Binding Proteins</h3>
-      <p>Visualized RNA binding protein signals alongside gene annotation data using Python, Matplotlib, and Seaborn.</p>
-      <a href="https://github.com/Kin-zala/genomic-visualization-rna-binding-proteins" target="_blank">View on GitHub →</a>
-    </div>
+<section id="projects">
+  <h2>My Projects</h2>
 
-    <div class="project">
-      <h3>Genomic Visualization Exercise 2</h3>
-      <p>Extended genomic visualization with a multi‑panel figure combining scatter plots, bar charts, and heatmaps.</p>
-      <a href="https://github.com/Kin-zala/genomic-visualization_2" target="_blank">View on GitHub →</a>
-    </div>
+  <div class="project">
+    <h3>RNA_Snakemake_Workflow – Automated RNA-Seq Pipeline</h3>
+    <ul>
+      <li>End-to-end reproducible workflow (FASTQ → Differentially Expressed Genes)</li>
+      <li>Tools: Snakemake, STAR, Cutadapt, featureCounts, DESeq2</li>
+      <li>Isolated Conda environments for HPC reproducibility</li>
+    </ul>
+  </div>
 
-    <div class="project">
-      <h3>Genomic Visualization Exercise 3</h3>
-      <p>Created a structured grid of line plots to compare patterns across different genomic datasets.</p>
-      <a href="https://github.com/Kin-zala/Genomic_visualization_3" target="_blank">View on GitHub →</a>
-    </div>
+  <div class="project">
+    <h3>GeneScope – Interactive Transcriptomic Visualization App</h3>
+    <ul>
+      <li>Streamlit-based PCA, clustering, and gene expression visualization</li>
+      <li>Backend: Pandas, NumPy</li>
+      <li>Interactive heatmaps & boxplots using Plotly</li>
+    </ul>
+  </div>
 
-    <div class="project">
-      <h3>Genomic Visualization Exercise 4</h3>
-      <p>Notebooks and scripts demonstrating consistency in bioinformatics visual storytelling.</p>
-      <a href="https://github.com/Kin-zala/genomic_visualization_4" target="_blank">View on GitHub →</a>
-    </div>
-  </section>
+  <div class="project">
+    <h3>Genomic-Visualization-RBP</h3>
+    <ul>
+      <li>RNA-binding protein signal visualization across genomic coordinates</li>
+      <li>Multi-panel plots with Matplotlib & Seaborn</li>
+      <li>Integrated transcript annotation data</li>
+    </ul>
+  </div>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-item"><strong>M.Sc. Life Science Informatics</strong> (Deggendorf Institute of Technology) - Expected 2026</div>
-    <div class="education-item"><strong>Post-graduate Research</strong> (University of Reading)</div>
-    <div class="education-item"><strong>M.Sc. in Forensic Science</strong> (Gujarat University)</div>
-    <div class="education-item"><strong>B.Sc. in Microbiology</strong> (Gujarat University)</div>
+  <div class="project">
+    <h3>Genomic Visualization Framework (_2, _3, _4)</h3>
+    <ul>
+      <li>Comparative & longitudinal genomic dataset visualization</li>
+      <li>K-mer frequency analysis & motif detection</li>
+      <li>Spectral mapping for DNA sequence analysis</li>
+    </ul>
+  </div>
 
-    <h3 class="sub-heading">Interests & Hobbies</h3>
-    <div class="hobby">Cooking</div>
-    <div class="hobby">Rifle Shooting</div>
-    <div class="hobby">Travelling</div>
-  </section>
+  <div class="project">
+    <h3>Kin-zala.github.io – Professional Bioinformatics Portfolio</h3>
+    <ul>
+      <li>Deployed cloud-hosted portfolio</li>
+      <li>Integrated live Streamlit applications</li>
+      <li>Interactive dashboards for genomic analytics</li>
+    </ul>
+  </div>
+</section>
 
-  <section id="tools">
-    <h2>Bioinformatics Tools</h2>
-    <p style="margin-bottom: 1.5rem;">Interactive Streamlit application for genomic data analysis and visualization.</p>
-    <div class="iframe-container">
-      <iframe src="https://tools.kinnarizala.me/" title="Bioinformatics Tool"></iframe>
-    </div>
-  </section>
+<section id="education">
+  <h2>Education</h2>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:kinnarizala.me@gmail.com">kinnarizala.me@gmail.com</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Kin-zala" target="_blank">github.com/Kin-zala</a></p>
-      <p><strong>Location:</strong> Currently seeking Thesis opportunities</p>
-    </div>
-  </section>
+  <div class="education-item">
+    <strong>MSc Life Science Informatics (Bioinformatics)</strong><br>
+    Deggendorf Institute of Technology, Bavaria, Germany | Expected 2026<br>
+    Focus: RNA-Seq analysis, NGS data processing, R & Python programming, workflow automation
+  </div>
 
-  <script>
-    const tabs = document.querySelectorAll('.tab-btn');
-    const sections = document.querySelectorAll('section');
+  <div class="education-item">
+    <strong>Postgraduate Research Experience, Biological Sciences</strong><br>
+    University of Reading, UK | 2017–2019, 2021<br>
+    Conducted laboratory and genomics-related research
+  </div>
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        sections.forEach(sec => sec.classList.remove('active'));
-        const target = tab.getAttribute('data-tab');
-        document.getElementById(target).classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
-  </script>
+  <div class="education-item">
+    <strong>MSc Forensic Science</strong><br>
+    Gujarat University, Ahmedabad, India | 2013<br>
+    Thesis published as a scientific book
+  </div>
+
+  <div class="education-item">
+    <strong>BSc Microbiology</strong><br>
+    Gujarat University, Ahmedabad, India | 2011
+  </div>
+
+  <div class="education-item">
+    <strong>Diploma in Computer Applications</strong><br>
+    Ahmedabad, India | 2009
+  </div>
+
+  <h3 class="sub-heading">Technical Skills</h3>
+  <ul class="skill-list">
+    <li><strong>Programming & Data Analysis:</strong> Python (Pandas, NumPy), R (DESeq2, ggplot2), Bash/Linux</li>
+    <li><strong>NGS & Bioinformatics Tools:</strong> FastQC, Cutadapt, STAR, featureCounts, Snakemake</li>
+    <li><strong>Data Visualization:</strong> Matplotlib, Seaborn, Plotly, Streamlit</li>
+    <li><strong>Software:</strong> Git/GitHub, VS Code, Microsoft Office</li>
+    <li><strong>Soft Skills:</strong> Independent research, scientific communication, data interpretation</li>
+    <li><strong>Languages:</strong> English (C1) | German (B1)</li>
+  </ul>
+
+  <h3 class="sub-heading">Scholarships & Academic Achievements</h3>
+  <ul class="skill-list">
+    <li>Qualified UGC-NET (India) – 2012, 2013, 2014</li>
+    <li>Rajiv Gandhi National Fellowship – 2014</li>
+    <li>National Overseas Scholarship, Government of India – 2015, 2016</li>
+  </ul>
+
+  <h3 class="sub-heading">Interests & Hobbies</h3>
+  <div class="hobby">Cooking</div>
+  <div class="hobby">Bird Watching</div>
+  <div class="hobby">Rifle Shooting</div>
+  <div class="hobby">Travelling</div>
+</section>
+
+<section id="tools">
+  <h2>Bioinformatics Tools</h2>
+  <p style="margin-bottom: 1.5rem;">Interactive Streamlit application for genomic data analysis and visualization.</p>
+  <div class="iframe-container">
+    <iframe src="https://tools.kinnarizala.me/" title="Bioinformatics Tool"></iframe>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-info">
+    <p><strong>Email:</strong> <a href="mailto:kinnarizala.me@gmail.com">kinnarizala.me@gmail.com</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Kin-zala" target="_blank">github.com/Kin-zala</a></p>
+    <p><strong>Location:</strong> Germany – Open to thesis & research collaborations</p>
+  </div>
+</section>
+
+<script>
+const tabs = document.querySelectorAll('.tab-btn');
+const sections = document.querySelectorAll('section');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(tab.dataset.tab).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+
 </body>
 </html>
-
