@@ -385,7 +385,10 @@
     <img src="./portfolio_image.png" alt="Kinnari Zala" class="profile-img">
     <div class="about-text">
       <p>
-        Bioinformatics MSc student at Deggendorf Institute of Technology with hands-on experience in NGS data analysis, omics pipelines (transcriptomics, proteomics, metagenomics), and reproducible workflow development using Python, R, and Snakemake. Skilled in interpreting complex multi-condition biological datasets and building interactive visualization tools. 
+        Bioinformatics MSc student at Deggendorf Institute of Technology with hands-on experience in NGS data analysis, omics pipelines (transcriptomics, proteomics, metagenomics), and reproducible workflow development using Python, R, and Snakemake. Skilled in interpreting complex multi-condition biological datasets and building interactive visualization and data-tracking tools.
+      </p>
+      <p>
+        Recently built <strong>SeqTrace</strong> — a DSI reuse tracking tool that traces plant DNA sequences from ENA submission through scientific literature and patents worldwide, integrating the ENA, NCBI Entrez, and EuropePMC APIs into a live Streamlit dashboard deployed on a Linux server. Built as a prototype directly relevant to biodiversity benefit-sharing policy under the Kunming-Montreal Global Biodiversity Framework.
       </p>
       <p>
         Published researcher with a broad interest in computational biology — from microbial community dynamics and environmental genomics to molecular adaptations in human systems. Seeking a Master's thesis position where bioinformatics meets cutting-edge biological questions.
@@ -398,7 +401,7 @@
     <div class="skills-grid">
       <div class="skill-card">
         <div class="skill-title">Programming & Analysis</div>
-        <p>Python (Pandas, NumPy, SciPy, gseapy), R (limma, DESeq2, ggplot2), Bash/Linux</p>
+        <p>Python (Pandas, NumPy, SciPy, gseapy), R (limma, DESeq2, ggplot2), Bash/Linux, SQLite</p>
       </div>
       <div class="skill-card">
         <div class="skill-title">Proteomics & Bioinformatics</div>
@@ -409,12 +412,12 @@
         <p>Differential expression, pathway enrichment (GO, KEGG, Reactome), PPI networks, FDR correction, PCA</p>
       </div>
       <div class="skill-card">
-        <div class="skill-title">Visualization</div>
-        <p>Matplotlib, Seaborn, Plotly, Streamlit</p>
+        <div class="skill-title">Visualization & Apps</div>
+        <p>Matplotlib, Seaborn, Plotly, Streamlit · REST APIs (ENA, NCBI Entrez, EuropePMC)</p>
       </div>
       <div class="skill-card">
-        <div class="skill-title">Software & Tools</div>
-        <p>Git/GitHub, VS Code, Microsoft Office</p>
+        <div class="skill-title">Software & Deployment</div>
+        <p>Git/GitHub, VS Code, Linux server deployment, nginx, Oracle Cloud, Let's Encrypt SSL</p>
       </div>
       <div class="skill-card">
         <div class="skill-title">Languages</div>
@@ -428,6 +431,23 @@
 <section id="projects">
   <div class="section-label">Portfolio</div>
   <h2>My Projects</h2>
+
+  <div class="project">
+    <div class="project-header">
+      <h3>SeqTrace — DSI Reuse Tracker</h3>
+      <span class="project-tag">Bioinformatics · Python · Streamlit</span>
+    </div>
+    <ul>
+      <li>Tracks the downstream journey of plant DNA sequences from ENA submission through scientific literature and patents — directly relevant to biodiversity benefit-sharing policy under the Kunming-Montreal Global Biodiversity Framework</li>
+      <li>Integrates three public REST APIs (ENA Portal, NCBI Entrez, EuropePMC) with a SQLite database; analysed 500 sequences across 299 organisms from 29 countries (1999–2018)</li>
+      <li>Found 54.4% traceability gap — 272 of 500 sequences leave no recoverable downstream footprint despite originating from well-documented biodiversity collections</li>
+      <li>Interactive 6-tab Streamlit dashboard with world map, taxonomy sunburst, patent office breakdown, and live filters; deployed on Oracle Cloud VM with nginx and HTTPS</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://github.com/Kin-zala/seqtrace" target="_blank">View on GitHub →</a>
+      <a href="https://seqtrace.kinnarizala.me" target="_blank">Live Demo →</a>
+    </div>
+  </div>
 
   <div class="project">
     <div class="project-header">
@@ -602,9 +622,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
